@@ -1,6 +1,0 @@
-
-- name: minha primeira role
-  hosts: all
-  roles:
-   - confbase
-

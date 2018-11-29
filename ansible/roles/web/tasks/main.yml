@@ -1,8 +1,0 @@
----
-# tasks file for web
-
-- name: playbook de instalacao do servidor apache
-  include: apache.yaml
-
-- name: playbook de criacao do site
-  include: site.yaml
