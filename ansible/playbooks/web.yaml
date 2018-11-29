@@ -1,0 +1,6 @@
+
+- name: instalando servidor web
+  hosts: all
+  roles:
+   - web
+

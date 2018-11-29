@@ -1,0 +1,18 @@
+
+- name: instalando servidor apache no debian
+  package:
+    name: apache2
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: instalando servidor apache no centos
+  package:
+    name: httpd
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: iniciando servico httpd
+  service:
+    name: httpd
+    state: started
+  when: ansible_os_family == "RedHat"
