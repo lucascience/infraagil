@@ -1,5 +1,0 @@
-
-- name: criando a infra completa do puppet
-  hosts: all
-  roles:
-   - puppet
