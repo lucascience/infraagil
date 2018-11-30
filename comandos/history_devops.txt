@@ -1,0 +1,1000 @@
+  118  ansible-playbook segundo.yaml 
+  119  vim segundo.yaml
+  120  ansible-playbook segundo.yaml 
+  121  vim segundo.yaml
+  122  ansible-playbook segundo.yaml 
+  123  :q
+  124  vim exercicio
+  125  vim exercicio.yaml
+  126  ansible-playbook exercicio.yaml 
+  127  vim exercicio.yaml +29
+  128  ansible-playbook exercicio.yaml 
+  129  vim exercicio.yaml +30
+  130  ansible-playbook exercicio.yaml 
+  131  vim exercicio.yaml +37
+  132  ansible-playbook exercicio.yaml 
+  133  ls -alh
+  134  vim primeiro.yaml 
+  135  vim segundo.yaml 
+  136  vim exercicio.yaml 
+  137  cat /srv/devops
+  138  exit
+  139  cd /etc/ansible/
+  140  cd playbooks/
+  141  ls -alh
+  142  cd ../roles/
+  143  ls
+  144  ansible-galaxy init confbase
+  145  ls
+  146  cd confbase/
+  147  ls
+  148  cd ..
+  149  ls
+  150  cd confbase/
+  151  ls
+  152  cd tasks/
+  153  vim main.yml 
+  154  cat main.yml 
+  155  vim user.yaml
+  156  cat main.yml 
+  157  openssl passwd -1
+  158  vim user.yaml
+  159  vim install.yaml
+  160  vim files.yaml
+  161  cd ..
+  162  cd files/
+  163  vim padrao
+  164  cd ..
+  165  cd templates
+  166  vim config
+  167  cd ..
+  168  cd vars/
+  169  vim main.yml 
+  170  cd /etc/ansible/playbooks/
+  171  vim confbase.yaml
+  172  ansible-playbook confbase.yaml 
+  173  vim ../roles/confbase/tasks/user.yaml 
+  174  ansible-playbook confbase.yaml 
+  175  cat /etc/ansible/roles/confbase/tasks/files.yaml 
+  176  cat /etc/ansible/roles/confbase/templates/config 
+  177  cd ..
+  178  cd roles/
+  179  ls -alh
+  180  ansible-galaxy init install_server_web
+  181  ls -alh
+  182  cd tasks/
+  183  vim main.yml 
+  184  cd ..
+  185  rm -rf install_server_web/
+  186  ansible-galaxy init web
+  187  cd web/
+  188  cd tasks/
+  189  vim main.yml 
+  190  cat main.yml 
+  191  vim apache.yaml
+  192  vim site.yaml
+  193  cd ..
+  194  cd files/
+  195  vim index.html
+  196  mv index.html ../templates/
+  197  ls
+  198  cd ..
+  199  cd templates/
+  200  ls -alh
+  201  vim index.html 
+  202  cd ..
+  203  cd tasks/
+  204  vim site.yaml 
+  205  cd ..
+  206  cat ../confbase/vars/main.yml 
+  207  cd ..
+  208  ls
+  209  cd web
+  210  vim vars/main.yml 
+  211  vim templates/index.html 
+  212  vim vars/main.yml 
+  213  ls
+  214  cd files/
+  215  ls 
+  216  cd ..
+  217  ls
+  218  cd tasks/
+  219  ls
+  220  cd ..
+  221  cd ../../playbooks/
+  222  ls 
+  223  web.yaml
+  224  vim web.yaml
+  225  cat confbase.yaml 
+  226  vim web.yaml
+  227  cd ../roles/web/tasks/
+  228  cat main.yml 
+  229  cat apache.yaml 
+  230  cat site.yaml 
+  231  vim apache.yaml 
+  232  cat apache.yaml 
+  233  cd ..
+  234  cd playbooks/
+  235  ls -alh
+  236  ansible-playbook web.yaml 
+  237  vim ../roles/web/tasks/apache.yaml 
+  238  ansible-playbook web.yaml 
+  239  vim ../roles/web/tasks/site.yaml 
+  240  ansible-playbook web.yaml 
+  241  vim ../roles/web/tasks/apache.yaml 
+  242  vim ../roles/web/vars/main.yml 
+  243  vim ../roles/web/tasks/apache.yaml 
+  244  ansible-playbook web.yaml 
+  245  ifconfig
+  246  cd ..
+  247  cd roles/web/tasks/
+  248  vim main.yml 
+  249  ls /var/www/
+  250  ansible-playbook web.yaml 
+  251  cd ..
+  252  cd roles/web/tasks/
+  253  vim site.yaml 
+  254  cd ../../../playbooks/
+  255  ansible-playbook web.yaml 
+  256  vim ../roles/web/vars/main.yml 
+  257  ansible-playbook web.yaml 
+  258  vim ../roles/web/tasks/apache.yaml 
+  259  vim ../roles/web/templates/index.html 
+  260  mv ../roles/web/templates/index.html ../roles/web/files/
+  261  ls ../roles/web/templates/
+  262  ls ../roles/web/files/
+  263  vim ../roles/web/tasks/apache.yaml 
+  264  vim ../roles/web/tasks/site.yaml 
+  265  mv ../roles/web/files/index.html ../roles/web/templates/
+  266  mv ../roles/web/templates/index.html ../roles//web/templates/index
+  267  vim ../roles/web/templates/index 
+  268  ansible-playbook web.yaml 
+  269  vim ../roles/web/templates/index 
+  270  vim ../roles/web/vars/main.yml 
+  271  ansible-playbook web.yaml 
+  272  vim ../roles/web/templates/index 
+  273  ansible-playbook web.yaml 
+  274  cd ..
+  275  cd roles/
+  276  ansible-galaxy init puppet
+  277  cd puppet/
+  278  cd tasks/
+  279  vim main.yml 
+  280  vim repo.yaml
+  281  vim install.yaml
+  282  cd ..
+  283  cd playbooks/
+  284  vim puppet.yaml
+  285  vim ../roles/puppet/tasks/install.yaml 
+  286  vim puppet.yaml
+  287  ansible-playbook puppet.yaml 
+  288  vim ../roles/puppet/tasks/install.yaml 
+  289  vim ../roles/puppet/tasks/repo.yaml 
+  290  vim ../roles/puppet/tasks/install.yaml 
+  291  ansible-playbook puppet.yaml 
+  292  vim ../roles/puppet/tasks/repo.yaml 
+  293  ansible-playbook puppet.yaml 
+  294  vim ../roles/puppet/tasks/install.yaml 
+  295  ansible-playbook puppet.yaml 
+  296  logout
+  297  puppet --version
+  298  puppet resource user
+  299  puppet resource user root
+  300  puppet resource user linux
+  301  puppet resource user linus ensure=present
+  302  puppet resource user linus
+  303  puppet resource user linus ensure=absent
+  304  puppet resource service
+  305  puppet resource service uui*
+  306  puppet resource service apache2
+  307  puppet resource service apache2 ensure=>stop
+  308  puppet resource service apache2 ensure=>stopped
+  309  puppet resource service apache2 ensure=stopped
+  310  puppet resource service apache2
+  311  puppet resource package
+  312  puppet resource package ntpdate
+  313  puppet resource package ntpdate ensure=present
+  314  puppet resource package ntpdate
+  315  puppet resource package ntpdate ensure=absent
+  316  facter
+  317  facter hostname
+  318  facter host
+  319  facter ip
+  320  facter ipaddresss
+  321  facter ipaddress]
+  322  facter ipaddress
+  323  puppet resource package puppetserver
+  324  puppet resource service puppetserver
+  325  puppet resource service puppetserver ensure=start
+  326  puppet resource service puppetserver ensure=started
+  327  puppet resource service puppetserver ensure=running
+  328  free -h
+  329  ss -ntpl
+  330  vim /etc/default/puppetserver 
+  331  cd /etc/puppetlabs/code/environments/production/
+  332  ls
+  333  cd manifests/
+  334  ls
+  335  vim site.pp
+  336  cd ../modules/
+  337  ls
+  338  pdk new module config
+  339  puppet resource pdk
+  340  puppet resource package pdk
+  341  puppet resource package pdk ensure=present
+  342  puppet module install puppetlabs-stdlib --version 5.1.0
+  343  pdk new module config
+  344  ls
+  345  cd config/
+  346  ls
+  347  cat metadata.json 
+  348  cd manifests/
+  349  ls
+  350  vim init.pp
+  351  cd ../files/
+  352  vim puppet.conf
+  353  exit
+  354  puppet cert list
+  355  puppet cert sign docker.dexter.com.br
+  356  ssh docker.dexter.com.br
+  357  ssh automation.dexter.com.br
+  358  puppet cert list
+  359  ssh automation.dexter.com.br
+  360  puppet cert sign automation.dexter.com.br
+  361  ssh automation.dexter.com.br
+  362  vim /etc/puppetlabs/puppet/puppet.conf 
+  363  vim /etc/puppetlabs/puppet/autosign.conf
+  364  cd /etc/puppetlabs/code/environments/production/
+  365  vim manifests/site.pp 
+  366  cd modules/
+  367  pdk new module base
+  368  ls
+  369  cd ..
+  370  cd manifests/
+  371  vim init.pp
+  372  cd ..
+  373  cd modules/base/manifests/
+  374  vim init.pp
+  375  ssh automation.dexter.com.br
+  376  vim init.pp
+  377  ssh automation.dexter.com.br
+  378  ssh docker.dexter.com.br
+  379  exit
+  380  cd /etc/puppetlabs/code/environments/production/modules/config/manifests/
+  381  ls
+  382  vim init.pp 
+  383  ssh docker.dexter.com.br
+  384  ssh automation.dexter.com.br
+  385  ssh docker.dexter.com.br
+  386  exit
+  387  cd /etc/puppetlabs/puppet
+  388  ls
+  389  cd ..
+  390  ls -alh
+  391  ls
+  392  cd code/
+  393  ls -alh
+  394  cd modules/
+  395  ls -alh
+  396  cd ..
+  397  cd environments/
+  398  ls 
+  399  cd production/
+  400  ls -alh
+  401  cd modules/
+  402  ls -alh
+  403  pdk new module apache
+  404  cd apache/manifests/
+  405  ls]
+  406  ls
+  407  vim init.pp
+  408  cp /etc/ansible/roles/web/templates/index ../files/
+  409  cd ../files/
+  410  ls
+  411  vim index 
+  412  mv index index.html
+  413  puppet resource service puppetserver
+  414  puppet resource service puppetserver ensure=started
+  415  puppet resource service puppetserver ensure=running
+  416  cd ..
+  417  ls
+  418  cd ..
+  419  ls -alh
+  420  cd manifests/
+  421  ls -alh
+  422  vim site.pp 
+  423  ls
+  424  cd ..
+  425  ls
+  426  cd manifests/
+  427  ls -alh
+  428  ls
+  429  cd .
+  430  ls -alh
+  431  cd ..
+  432  ls -alh
+  433  cd modules/
+  434  ls -alh
+  435  cd config/
+  436  ls -alh
+  437  cd manifests/
+  438  ls -alh
+  439  vim init.pp 
+  440  cd ..
+  441  cd base/
+  442  ls -alh
+  443  cd manifests/
+  444  ls -alh
+  445  vim init.pp 
+  446  cd ../../apache/manifests/
+  447  vim init.pp 
+  448  cd ..
+  449  cd ../..
+  450  ls
+  451  cd manifests/
+  452  ls -alh
+  453  vim init.pp
+  454  cd ../modules/apache/manifests/
+  455  ls -alh
+  456  vim init.pp 
+  457  cd ..
+  458  cd ../../../
+  459  cd ../..
+  460  ls
+  461  cd puppetserver/
+  462  ls -alh
+  463  cd ..
+  464  ls -alh
+  465  cd puppet
+  466  ls -alh
+  467  cat puppet.conf 
+  468  cd ..
+  469  ls -alh
+  470  cd code/
+  471  ls 
+  472  cd environments/
+  473  ls -alh
+  474  cd production/
+  475  ls -alh
+  476  vim environment.conf 
+  477  ls
+  478  cd manifests/
+  479  ls -alh
+  480  vim site.pp 
+  481  cd ..
+  482  cd modules/config/
+  483  ls -alh
+  484  cd manifests/
+  485  ls -alh
+  486  vim init.pp 
+  487  cd ..
+  488  cd files/
+  489  ls -alh
+  490  vim puppet.conf 
+  491  cd /
+  492  cd /etc/ansible/playbooks/
+  493  vim docker.yaml
+  494  ansible-playbook docker.yaml 
+  495  cat docker.yaml 
+  496  vim /etc/puppetlabs/code/environments/production/manifests/site.pp 
+  497  vim /etc/puppetlabs/code/environments/production/modules/apache/manifests/init.pp 
+  498  exit
+  499  apt update && apt install git -y
+  500  mkdir aula
+  501  git status
+  502  git init
+  503  cd aula/
+  504  git init
+  505  git status
+  506  git add config.php
+  507  vim config.php
+  508  git add config.php 
+  509  ls
+  510  git status
+  511  git commit -m "criei o arquivo para exemplo"
+  512  git log
+  513  git config --global user.name "Lucas"
+  514  git config --global user.email "lucas.rodrigues@totvs.com.br"
+  515  git branch
+  516  git checkout -b homolog
+  517  git checkout -b developer
+  518  git branch
+  519  ls
+  520  git checkout homolog
+  521  git branch
+  522  git checkout developer
+  523  git branch
+  524  vim index.html
+  525  git add index.html 
+  526  git status
+  527  git commit -m "criei o meu site"
+  528  ls
+  529  git branch
+  530  git branch homolog
+  531  git checkout homolog
+  532  ls
+  533  git checkout developer
+  534  git diff developer homolog
+  535  git checkout homolog
+  536  ls
+  537  git merge developer
+  538  ls
+  539  ls -a
+  540  git log
+  541  git remote -v
+  542  git remote add repo https://github.com/lucascience/525.git
+  543  git remote -v
+  544  git push repo homolog
+  545  cd /tmp/
+  546  git clone https://github.com/lucascience/525.git
+  547  ls
+  548  cd 525/
+  549  ls -alh
+  550  git remote -v
+  551  cd /~
+  552  cd ~/
+  553  ls
+  554  vim stop
+  555  cd aula/
+  556  ls -alh
+  557  cd ..
+  558  mkdir infraagil
+  559  ls -alh
+  560  cd infraagil/
+  561  ls -alh
+  562  cd /etc/ansible/
+  563  ls -alh
+  564  cat ansible.cfg 
+  565  ls
+  566  cat hosts 
+  567  cd ~/root
+  568  cd ~/
+  569  ls 
+  570  cd infraagil/
+  571  ls -alh
+  572  cp -R /etc/ansible/ .
+  573  cp -R /etc/puppetlabs/code/environments/production/ .
+  574  ssh docker.dexter.com.br
+  575  scp 
+  576  scp root@docker.dexter.com.br:/root/dockerfile .
+  577  scp root@docker.dexter.com.br:/root/dockerfile/* .
+  578  ls
+  579  mkdir dockerfile
+  580  mv devops Dockerfile dockerfile/
+  581  ls -alh
+  582  scp root@docker.dexter.com.br:/root/compose/* ./compose
+  583  scp root@docker.dexter.com.br:/root/compose/* .
+  584  scp -r root@docker.dexter.com.br:/root/compose/* ./compose
+  585  ls -alh
+  586  cd compose/
+  587  ls -alh
+  588  mkdir wordpress
+  589  mv docker-compose.yml wordpress/
+  590  ls -alh
+  591  cd ..
+  592  ls -alh
+  593  git init
+  594  git add .
+  595  git status
+  596  cd production/modules/
+  597  ls -alh
+  598  rm -rf stdlib/
+  599  ls -alh
+  600  cd ..
+  601  git status
+  602  git add .
+  603  git status
+  604  git commit -m "arquivos criados durante o curso 525 da 4Linux"
+  605  git remote add infraagil https://github.com/lucascience/infraagil.git
+  606  git branch
+  607  git push infraagil master 
+  608  git status
+  609  git log
+  610  cd ..
+  611  ls
+  612  apt update && apt install -y curl openssh-server ca-certificates
+  613  curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+  614  apt update && apt install gitlab-ce -y
+  615  vim /etc/gitlab/gitlab.rb 
+  616  gitlab-ctl reconfigure
+  617  gitlab-ctl restart
+  618  ss -ntpl | grep 80
+  619  systemctl stop apache2
+  620  ss -ntpl | grep 80
+  621  ls
+  622  cd infraagil/
+  623  ls -alh
+  624  git branch
+  625  git remote add devops http://192.168.33.151/root/devops.git
+  626  git branch
+  627  git branch -v
+  628  git
+  629  git status
+  630  git remote -v
+  631  git add ansible/*
+  632  git status
+  633  cd ansible/
+  634  ls -alh
+  635  cd ..
+  636  ls -alh
+  637  git add ansible/
+  638  git status
+  639  git add
+  640  git add .
+  641  git status
+  642  git branch
+  643  git status
+  644  git remote status
+  645  git status
+  646  cd ansible/
+  647  git add .
+  648  git status
+  649  cd ..
+  650  ll
+  651  cd infraagil/
+  652  ls -alh
+  653  git
+  654  git branch
+  655  git branch -v
+  656  git checkout devops
+  657  git remote -v
+  658  ls
+  659  ls -alh
+  660  git add ansible/ .
+  661  git status
+  662  cd ..
+  663  mkdir devops
+  664  cd devops/
+  665  git clone http://192.168.33.151/root/devops.git
+  666  git add ../infraagil/ansible
+  667  git status
+  668  git commit -m "enviando ansible"
+  669  git push master devops
+  670  git push devops master
+  671  git status
+  672  git branch
+  673  git push master devops
+  674  git push
+  675  git push master
+  676  git push devops
+  677  git push devops master
+  678  git branchs
+  679  git branch
+  680  git push master devops
+  681  git status
+  682  git log
+  683  git push origin master
+  684  git push devops
+  685  git push
+  686  git push devops
+  687  git remote -v
+  688  git branch
+  689  git status
+  690  git checkout devops
+  691  git checkout
+  692  git branch devops
+  693  git checkout devops 
+  694  ls
+  695  cd devops/
+  696  ls -alh
+  697  cd ..
+  698  rm -rf devops/
+  699  ls -al
+  700  ls -alh
+  701  cd ..
+  702  ls -alh
+  703  git status
+  704  git log
+  705  cd ..
+  706  ls -alh
+  707  cd root/
+  708  ls -alh
+  709  git branch
+  710  git checkout master
+  711  git log
+  712  ls -alh
+  713  git checkout
+  714  ls
+  715  cd infraagil/
+  716  git log
+  717  cd ..
+  718  cd devops/
+  719  ls -alh
+  720  git init
+  721  git clone http://192.168.33.151/root/devops.git
+  722  ls
+  723  git branch
+  724  cd devops/
+  725  ls
+  726  cd ..
+  727  rm -rf devops/
+  728  ls -alh
+  729  git clone http://192.168.33.151/root/devops.git
+  730  ls
+  731  cd devops/
+  732  ls -alh
+  733  cd ..
+  734  git branch
+  735  cd devops/
+  736  ls -alh
+  737  git branch
+  738  ls
+  739  cd ..
+  740  ls -alh
+  741  ls
+  742  cd devops/
+  743  git add ../infraagil/ansible
+  744  ls
+  745  git branch devops
+  746  git branch
+  747  cd ..
+  748  ls -alh
+  749  git branch
+  750  git checkout devops 
+  751  ls -alh
+  752  ls
+  753  cd devops/
+  754  ls -alh
+  755  cd ..
+  756  ls -alh
+  757  ls
+  758  cd ..
+  759  cd r
+  760  cd root/
+  761  ls
+  762  git branch
+  763  git checkout master
+  764  ls -alh
+  765  ls
+  766  rm -rf stop stopped 
+  767  ls
+  768  cd devops/
+  769  ls
+  770  cp -R ../infraagil/ansible
+  771  cp -r ../infraagil/ansible
+  772  cp -r ../infraagil/ansible .
+  773  ls
+  774  git log
+  775  cd ..
+  776  git checkout master
+  777  git log
+  778  git push master devops
+  779  git push devops master
+  780  git push devops
+  781  git remote -v
+  782  git remote
+  783  git remote add devops http://192.168.33.151/root/devops.git
+  784  git remote -v
+  785  git remote add infraagil https://github.com/lucascience/infraagil.git
+  786  git remote -v
+  787  git log
+  788  git push devops
+  789  git push master devops
+  790  git push devops master
+  791  cd devops/
+  792  ls
+  793  ls -alh
+  794  cd ..
+  795  ls -alh
+  796  git commit 
+  797  git log
+  798  git hist
+  799  git history
+  800  git hist
+  801  ls
+  802  cd devops/
+  803  git hist
+  804  git lgo
+  805  git log
+  806  cd ..
+  807  git branch
+  808  git branch remove devops
+  809  ls
+  810  git branc
+  811  git branch
+  812  git
+  813  git branch 
+  814  git branch delete remove
+  815  git branch
+  816  git branch -d delete
+  817  git branch -d remove
+  818  git branch -d devops 
+  819  git branch
+  820  git status
+  821  git rebase
+  822  git rebase master
+  823  git status
+  824  git commit
+  825  git log
+  826  git reset --hard HEAD~1
+  827  git reset
+  828  git log
+  829  git push origin HEAD --force
+  830  ls
+  831  cd devops/
+  832  ls
+  833  cd ..
+  834  git hist
+  835  git log
+  836  git clone devops/
+  837  git remote -v
+  838  ls
+  839  rm -rf devops/
+  840  ls -alh
+  841  ls
+  842  git clone 
+  843  git clone http://192.168.33.151/root/devops.git
+  844  ls
+  845  git log
+  846  ls -alh
+  847  rm -rf .git
+  848  ls -alh
+  849  cd devops/
+  850  git init 
+  851  ls
+  852  ls -alh
+  853  cd ..
+  854  ls -alh
+  855  cd infraagil/
+  856  ls -alh
+  857  git log
+  858  cd ..
+  859  cd devops/
+  860  ls -alh
+  861  git log 
+  862  cp ../infraagil/ansible/ .
+  863  cp -r ../infraagil/ansible/ .
+  864  ls -alh
+  865  cd ansible/
+  866  ls -alh
+  867  cd ..
+  868  git add .
+  869  git commit -m "add pasta ansible"
+  870  git log
+  871  git push master devops
+  872  git push
+  873  cd ..
+  874  cd infraagil/
+  875  ls
+  876  git push
+  877  git push infraagil 
+  878  git branchs
+  879  git branch
+  880  cd ..
+  881  git clone infraagil https://github.com/lucascience/infraagil.git
+  882  git branch
+  883  ls
+  884  cd infraagil/
+  885  ls -alh
+  886  git branch
+  887  git log
+  888  cd ..
+  889  ls -alh
+  890  ls -lh
+  891  rm -rf https\:/
+  892  ls
+  893  git clone https://github.com/lucascience/infraagil.git
+  894  rm -rf infraagil/
+  895  git clone https://github.com/lucascience/infraagil.git
+  896  cd infraagil/
+  897  ls -alh
+  898  ls
+  899  git branch
+  900  git checkout ansible
+  901  git checkout puppet
+  902  git branch
+  903  git checkout ansible
+  904  git branch
+  905  git checkout master
+  906  git branch
+  907  git checkout ansible
+  908  git branch
+  909  git checkout docker
+  910  git branch
+  911  git branch ansible
+  912  git branch
+  913  ls
+  914  git checkout ansible
+  915  git branch
+  916  ls
+  917  rm -rf compose/ dockerfile/ production/
+  918  ls -alh
+  919  ls
+  920  cd ..
+  921  ls
+  922  cd infraagil/
+  923  ls 
+  924  git branch
+  925  git checkout docker 
+  926  git branch
+  927  ls
+  928  git checkout ansible
+  929  git branch
+  930  git checkout master 
+  931  ls
+  932  git branch
+  933  git checkout ansible 
+  934  git push ansible
+  935  git push orgin ansible
+  936  git push ansible infraagil
+  937  git branch
+  938  git push infraagil
+  939  git push ansible infraagil
+  940  ls
+  941  git push infraagil
+  942  git remote -v
+  943  git push origin ansible
+  944  ls
+  945  git ckeckout master
+  946  git commit -m "arquivos ansible"
+  947  git push origin ansible
+  948  git push ansible
+  949  git push ansible ansible
+  950  git push origin ansible
+  951  ls
+  952  cd ..
+  953  ls
+  954  cd infraagil/
+  955  ls
+  956  cd ..
+  957  rm -rf infraagil/
+  958  git clone https://github.com/lucascience/infraagil.git
+  959  ls
+  960  cd infraagil/
+  961  ls
+  962  cd ..
+  963  ls -alh
+  964  cd infraagil/
+  965  ls
+  966  git branch
+  967  exit
+  968  ls
+  969  cd infraagil/
+  970  ls -alh
+  971  git status
+  972  git log
+  973  ls
+  974  git branch
+  975  git checkout ansible
+  976  git branch
+  977  git branch ansible
+  978  git branch
+  979  git checkout ansible
+  980  ls
+  981  touch lucas
+  982  ls
+  983  checkout master
+  984  git checkout master
+  985  ls
+  986  rm -rf lucas 
+  987  ls
+  988  git checkout ansible 
+  989  ls
+  990  cd /etc/ansible/
+  991  vim playbooks/rundeck.yaml
+  992  ansible-playbook playbooks/rundeck.yaml 
+  993  git status
+  994  cd /root/infraagil/
+  995  ls 
+  996  git status
+  997  git branch
+  998  ls
+  999  rm -r compose/ dockerfile/ production/
+ 1000  ls
+ 1001  git add .
+ 1002  git commit -m "arquivos ansible"
+ 1003  git push origin ansible
+ 1004  ls
+ 1005  git checkout master
+ 1006  ls
+ 1007  cd /etc/ansible/
+ 1008  ssh automation.dexter.com.br
+ 1009  cd /root/infraagil/ 
+ 1010  ls -alh
+ 1011  ls
+ 1012  git branch docker
+ 1013  git branch
+ 1014  git checkout docker
+ 1015  ls
+ 1016  rm -rf ansible/ production/
+ 1017  git add .
+ 1018  git push origin docker
+ 1019  ls
+ 1020  git branch
+ 1021  git commit -m "arquivos docker"
+ 1022  git push origin docker
+ 1023  ssh automation.dexter.com.br
+ 1024  git branch
+ 1025  git branch puppet
+ 1026  git branch
+ 1027  git checkout puppet
+ 1028  ls
+ 1029  git branch
+ 1030  ls
+ 1031  rm -rf *
+ 1032  ls
+ 1033  git checkout master
+ 1034  ls
+ 1035  cd ..
+ 1036  rm -rf infraagil/
+ 1037  git clone infraagil https://github.com/lucascience/infraagil.git
+ 1038  ls
+ 1039  git clone infraagil https://github.com/lucascience/infraagil.git
+ 1040  git clone https://github.com/lucascience/infraagil.git
+ 1041  ls -alh
+ 1042  ls
+ 1043  cd infraagil/
+ 1044  ls -alh
+ 1045  ls
+ 1046  git branch
+ 1047  ssh automation.dexter.com.br
+ 1048  ls
+ 1049  git branch puppet
+ 1050  git checkout puppet
+ 1051  git branch
+ 1052  ls
+ 1053  rm -rf ansible/ compose/ dockerfile/
+ 1054  ls
+ 1055  git add .
+ 1056  git commit -m "arquivos puppet"
+ 1057  git push origin puppet
+ 1058  ls
+ 1059  git checkout master
+ 1060  ls
+ 1061  cd ..
+ 1062  ls
+ 1063  rm -rf infraagil/
+ 1064  git clone https://github.com/lucascience/infraagil.git
+ 1065  ls
+ 1066  cd infraagil/
+ 1067  ls
+ 1068  git branch
+ 1069  ssh automation.dexter.com.br
+ 1070  ls
+ 1071  cd ..
+ 1072  ls
+ 1073  rm -rf infraagil/
+ 1074  ls -alh
+ 1075  ls
+ 1076  git branch -b
+ 1077  git branch -a
+ 1078  ls
+ 1079  git clone https://github.com/lucascience/infraagil.git
+ 1080  git branch -a
+ 1081  cd infraagil/
+ 1082  git branch -a
+ 1083  git checkout origin/ansible 
+ 1084  git branch
+ 1085  git checkout ansile
+ 1086  git checkout ansible
+ 1087  git branch
+ 1088  ls
+ 1089  cd ansible/
+ 1090  ls
+ 1091  cd ..
+ 1092  ls
+ 1093  git checkout master
+ 1094  ls
+ 1095  git branch
+ 1096  git branch -a
+ 1097  git branch
+ 1098  git checkout origin/ansible
+ 1099  git branch
+ 1100  git branch -a
+ 1101  git checkout ansible
+ 1102  git branch
+ 1103  git checkout master
+ 1104  git branch -a
+ 1105  git branch
+ 1106  git branch 
+ 1107  ssh automation.dexter.com.br
+ 1108  vim /etc/ansible/playbooks/
+ 1109  vim /etc/ansible/playbooks/jenkins.yaml
+ 1110  ansible-playbook /etc/ansible/playbooks/jenkins.yaml
+ 1111  vim /etc/ansible/playbooks/jenkins.yaml
+ 1112  ansible-playbook /etc/ansible/playbooks/jenkins.yaml
+ 1113  ssh automation.dexter.com.br
+ 1114  exit
+ 1115  cd /tmp/
+ 1116  ls
+ 1117  history >> history_devops.txt
