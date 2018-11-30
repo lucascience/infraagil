@@ -1,0 +1,15 @@
+
+- name: instalando o rundeck em centos
+  hosts: automation
+  tasks:
+   - name: instalando o repositorio do rundeck
+     yum:
+      name: http://repo.rundeck.org/latest.rpm
+      state: present
+
+   - name: instalando o java e o rundeck
+     package:
+      name: "{{item}}"
+     with_items:
+      - java
+      - rundeck

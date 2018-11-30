@@ -1,0 +1,18 @@
+
+- name: baixando pacotes do jenkins
+  hosts: automation
+  tasks:
+   - name: install wget
+     package:
+      name: wget
+
+   - name: adicionando repositorio
+     shell: "wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo"
+
+   - name: adicionando a chave do repo
+     shell: "rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+
+   - name: install jenkins
+     package:
+      name: jenkins
+
